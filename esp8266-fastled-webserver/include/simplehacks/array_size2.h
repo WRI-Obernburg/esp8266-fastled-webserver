@@ -54,7 +54,7 @@ SOFTWARE.
         #pragma message( "ARRAY_SIZE2 -- Using C++11 version" )
     #endif
 
-    namespace detail
+    namespace detaill
     {
         template <typename T, size_t N>
         constexpr size_t ARRAY_SIZE2_ARGUMENT_CANNOT_BE_POINTER(T const (&)[N]) noexcept
@@ -62,7 +62,7 @@ SOFTWARE.
             return N;
         }
     } // namespace detail
-    #define ARRAY_SIZE2(arr) detail::ARRAY_SIZE2_ARGUMENT_CANNOT_BE_POINTER(arr)
+    #define ARRAY_SIZE2(arr) detaill::ARRAY_SIZE2_ARGUMENT_CANNOT_BE_POINTER(arr)
 
 #elif __cplusplus >= 199711L && ( /* C++ 98 trick */   \
       defined(__INTEL_COMPILER) ||                     \
